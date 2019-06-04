@@ -4,9 +4,17 @@
     {{ title }}!
   </h1>  
 </div>
+<h2>Below form has Check box double click issue</h2>
 <form #f="ngForm">
   <input type="text" name="Name" [(ngModel)]="person.Name" required #Name="ngModel">
   <input type="checkbox" name="Employed" [(ngModel)]="person.Employed" checked={{person.Employed}} required #Employed="ngModel">
   <pre>{{f.value | json}}</pre>
+</form>
+
+<h2>Below form has NO Check box double click issue</h2>
+<form #f2="ngForm">
+  <input type="text" name="Name" [(ngModel)]="secondPerson.Name" required #Name="ngModel">
+  <input type="checkbox" name="Employed" [(ngModel)]="secondPerson.Employed" required #Employed="ngModel">
+  <pre>{{f2.value | json}}</pre>
 </form>
 
