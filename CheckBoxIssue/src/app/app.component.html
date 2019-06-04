@@ -1,0 +1,12 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>  
+</div>
+<form #f="ngForm">
+  <input type="text" name="Name" [(ngModel)]="person.Name" required #Name="ngModel">
+  <input type="checkbox" name="Employed" [(ngModel)]="person.Employed" checked={{person.Employed}} required #Employed="ngModel">
+  <pre>{{f.value | json}}</pre>
+</form>
+
